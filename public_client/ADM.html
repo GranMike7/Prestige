@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Resetando margin e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header img {
+            width: 150px;
+            height: auto;
+        }
+
+
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .login-container {
+                padding: 30px;
+            }
+
+            .input-field {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .login-button {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 20px;
+            }
+
+            .input-field {
+                font-size: 12px;
+                padding: 6px;
+            }
+
+            .login-button {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="lOGO-DO-AÇAI.png" alt="Logo da Empresa">
+    </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" class="input-field" placeholder="Usuário" required>
+        <input type="password" id="password" class="input-field" placeholder="Senha" required>
+        <button class="login-button" onclick="login()">Entrar</button>
+        <p class="error-message" id="error-message">
+            Usuário ou senha incorretos!<br>
+           <a href="https://wa.me/558193357643?text=OI%2C%20PRECISO%20RECUPERAR%20MEU%20ACESSO%20DE%20ADM">Recuperar senha</a>.
+        </p>
+    </div>
+    <script src="/config/rj33tr.js"></script>
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (validarLogin(username, password)) {
+                window.location.href = 'links.html';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>

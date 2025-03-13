@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Rápidos</title>
+    <style>
+        /* Resetando margin e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Estilo para o topo com logo */
+        .header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header img {
+            width: 150px;
+            height: auto;
+        }
+
+        /* Contêiner principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .link-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 25px;
+            font-size: 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            width: 200px;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .link-button {
+                width: 180px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .link-button {
+                width: 160px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="lOGO-DO-AÇAI.png" alt="Logo da Empresa">
+    </div>
+
+    <div class="container">
+        <!-- Exemplo de links -->
+        <a href="https://kub.sh/1f2b9f" class="link-button" target="_blank">Estoque</a>
+        <a href="https://dashboard.goomer.app/stores/283077" class="link-button" target="_blank">Delivery Goomer</a>
+        <a href="https://portal.ifood.com.br/login" class="link-button" target="_blank">Ifood</a>
+        <a href="https://www.mercadopago.com.br/collections/pdv/pos-opening" class="link-button" target="_blank">Caixa</a>
+        <!-- Adicione quantos links desejar aqui -->
+    </div>
+    <footer>
+        <p>PRESTIGE AÇAITERIA© 2025 • Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
